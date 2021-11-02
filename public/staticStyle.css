@@ -1,0 +1,23 @@
+.btnModal {
+  padding: 4px;
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  border: black solid 1px;
+  background-color: black;
+  border-radius: 10%;
+
+  cursor: pointer;
+}
+
+.btnModal:hover {
+  color: white;
+}
+
+.logo {
+  width: 120px;
+  height: 50px;
+}

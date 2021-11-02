@@ -1,0 +1,182 @@
+.aboutContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 120px;
+}
+.aboutContainer h1 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  color: #b08f33;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.aboutStoryContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+.aboutStoryContainer P {
+  text-align: center;
+  font-size: 0.8rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-weight: 200;
+}
+
+.storyContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.storyImgCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.storyImg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 6px;
+  height: 300px;
+}
+.storyImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.storyDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 40px;
+}
+
+.storyDescInner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.storyDescInner h2 {
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted #b08f33;
+}
+
+.storyDescInner h3 {
+  font-size: 0.9rem;
+  line-height: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding-top: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.storyDescInner p {
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 10px;
+  font-weight: 200;
+  line-height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .aboutContainer h1 {
+    font-size: 3rem;
+  }
+  .aboutStoryContainer {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .aboutStoryContainer P {
+    font-size: 1.1rem;
+  }
+
+  .storyContainer {
+    width: 95%;
+    margin: auto;
+
+    flex-direction: row;
+  }
+  .storyImgCtn {
+    width: 41%;
+  }
+  .storyImg {
+    height: 250px;
+  }
+
+  .storyDesc {
+    margin-top: 0px;
+  }
+  .storyDesc {
+    width: 50%;
+    margin-left: 20px;
+  }
+
+  .storyDescInner {
+    width: 100%;
+  }
+  .storyDescInner h2 {
+    text-align: start;
+    padding-bottom: 3px;
+  }
+  .storyDescInner h3 {
+    text-align: start;
+  }
+  .storyDescInner p {
+    text-align: start;
+    font-size: 1.1rem;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 6px;
+    font-weight: 200;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .storyContainer {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .storyImgCtn {
+    flex: 1;
+  }
+
+  .storyDesc {
+    flex: 2;
+  }
+
+  .storyDescInner {
+    width: 70%;
+  }
+}

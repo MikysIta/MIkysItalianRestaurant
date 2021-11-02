@@ -1,0 +1,32 @@
+.ctnFooter {
+  background-color: #262526;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ctnFooterInner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 58px;
+}
+
+.ctnFooterInner p {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.ctnFooterInner p span {
+  color: #b08f33;
+}
+
+@media screen and (min-width: 768px) {
+  .ctnFooterInner p {
+    font-size: 1rem;
+  }
+}

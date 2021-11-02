@@ -1,0 +1,327 @@
+.containerMenu {
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerMenuH1 h1 {
+  color: #b08f33;
+
+  font-size: 2.5rem;
+  text-align: center;
+  width: 100%;
+
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+}
+.containerMenuH1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.containerMenuH1 p {
+  text-align: center;
+  font-size: 0.8rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-weight: 200;
+}
+
+.containerInnerMenu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.containerSecondInnerMenu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.imageContainer {
+  position: relative;
+  width: 95%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.slideActive {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition-duration: 1s;
+}
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.foodImageMenus {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.containerMenuDesc {
+  height: 50vh;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.containerInnerMenuDesc {
+  top: -30px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.containerInnerMenuDescSecond {
+  top: -30px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.containerInnerMenuDesc h2 {
+  font-size: 2rem;
+  padding: 15px;
+
+  font-family: "Playfair Display", serif;
+}
+
+.containerInnerMenuDesc p {
+  padding: 15px;
+
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: #1093f4;
+  line-height: 25px;
+}
+
+.containerInnerMenuDescSecond h2 {
+  font-size: 2rem;
+  padding: 15px;
+  font-family: "Playfair Display", serif;
+}
+
+.containerInnerMenuDescSecond p {
+  padding: 15px;
+
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: #1093f4;
+  line-height: 25px;
+}
+
+.ButtonMenu {
+  padding: 15px;
+  color: #b08f33;
+  margin-right: 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 3rem;
+  box-shadow: 0px 20px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .containerMenu {
+    flex-direction: row;
+    margin-bottom: 100px;
+  }
+
+  .containerMenuH1 h1 {
+    font-size: 3rem;
+  }
+  .containerMenuH1 {
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+  .containerMenuH1 p {
+    font-size: 1.1rem;
+  }
+  .containerInnerMenu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 100%;
+  }
+  .containerSecondInnerMenu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 100%;
+  }
+
+  .imageContainer {
+    width: 90%;
+    height: 40vh;
+  }
+
+  .containerMenuDesc {
+    height: 30vh;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 60px;
+  }
+  .containerInnerMenuDesc {
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .containerInnerMenuDescSecond {
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .containerInnerMenuDesc p {
+    margin-bottom: 15px;
+
+    font-size: 1rem;
+
+    line-height: 30px;
+  }
+
+  .containerInnerMenuDescSecond p {
+    margin-bottom: 15px;
+
+    font-size: 1rem;
+
+    line-height: 30px;
+  }
+  .ButtonMenu {
+    padding: 15px;
+    color: #b08f33;
+    margin-right: 15px;
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    background-color: white;
+    border-radius: 3rem;
+    box-shadow: 0px 20px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1249px) {
+  .containerMenu {
+    margin-bottom: 100px;
+  }
+  .containerInnerMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 90%;
+  }
+  .containerSecondInnerMenu {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    width: 90%;
+  }
+  .imageContainer {
+    width: 50%;
+    height: 50vh;
+  }
+  .containerMenuDesc {
+    height: 40vh;
+    width: 40%;
+  }
+
+  .containerInnerMenuDesc {
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    left: -90px;
+    background-color: white;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .containerInnerMenuDescSecond {
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    left: 90px;
+    background-color: white;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}
+@media screen and (min-width: 1519px) {
+  .containerMenu {
+    width: 85%;
+  }
+}

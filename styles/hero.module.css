@@ -1,0 +1,210 @@
+/*Background slide images*/
+
+.sliderContainer {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sliderContainerWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgS {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*Banner*/
+
+.leftContainer {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 6;
+}
+
+.leftContainerInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  width: 100%;
+
+  z-index: 2;
+}
+
+.leftTitleContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftTitleContainer h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 8px;
+}
+
+.leftTitleContainer p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin-top: 15px;
+  text-align: center;
+  color: white;
+}
+
+.leftTitleButtons {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.herobtn {
+  padding: 12px;
+  color: #b08f33;
+  margin-right: 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 0.8rem;
+  font-weight: 200;
+  border: white solid 1px;
+  background-color: white;
+  border-radius: 3rem;
+  box-shadow: 0px 20px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.herobtnTwo {
+  padding: 12px;
+  color: white;
+  margin-right: 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 0.8rem;
+  border: #b08f33 solid 1px;
+  background-color: #b08f33;
+
+  font-weight: 200;
+  border-radius: 3rem;
+  box-shadow: 0px 20px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.foodImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 768px) {
+  .leftContainer {
+    max-width: 1170px;
+    margin: auto;
+    top: 100px;
+  }
+
+  .leftContainerInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .leftTitleContainer h1 {
+    width: 100%;
+    font-size: 7rem;
+    text-align: center;
+  }
+  .leftTitleContainer p {
+    text-align: center;
+    width: 80%;
+    font-size: 1.6rem;
+    line-height: 48px;
+    letter-spacing: 6px;
+    margin-top: 0;
+  }
+
+  .leftTitleContainer {
+    width: 80%;
+    align-items: center;
+  }
+  .herobtn,
+  .herobtnTwo {
+    font-size: 1.5rem;
+  }
+  .leftTitleButtons {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .leftContainerInner {
+    align-items: flex-start;
+  }
+
+  .leftTitleContainer h1 {
+    text-align: start;
+  }
+
+  .leftTitleContainer p {
+    text-align: start;
+  }
+  .leftTitleContainer {
+    align-items: flex-start;
+  }
+
+  .leftTitleButtons {
+    justify-content: flex-start;
+  }
+  .herobtn,
+  .herobtnTwo {
+    font-size: 1.2rem;
+  }
+}
