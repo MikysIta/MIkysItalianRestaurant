@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Images } from "../../utility/util";
+
 import heroStyles from "../../styles/hero.module.css";
 import menuStyles from "../../styles/menues.module.css";
 import { motion } from "framer-motion";
@@ -17,9 +17,9 @@ const imageVariant = {
   },
 };
 
-const HeroSlideImages = () => {
+const HeroSlideImages = ({ slides }) => {
   const [current, setCurrent] = useState(0);
-  const length = Images.length;
+  const length = slides.length;
   const timeout = useRef(null);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const HeroSlideImages = () => {
     <div className={heroStyles.sliderContainer}>
       <div className={heroStyles.sliderContainerWrapper}>
         <div className={heroStyles.slide}>
-          {Images.map(({ src, id }) => (
+          {slides.map((slide, id) => (
             <div
               className={
                 id === current ? menuStyles.slideActive : menuStyles.slide
@@ -52,7 +52,7 @@ const HeroSlideImages = () => {
                   animate="visible"
                   variants={imageVariant}
                   key={id}
-                  src={src}
+                  src={slide.fields.file.url}
                   alt="try"
                   className={heroStyles.foodImage}
                 />
