@@ -1,4 +1,6 @@
 .aboutContainer {
+  max-width: 1920px;
+  margin: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -46,6 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 95%;
 }
 
 .storyImg {
@@ -53,12 +56,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 6px;
+  margin-bottom: 8px;
   height: 300px;
-}
-.storyImg img {
-  width: 100%;
-  height: 100%;
+  position: relative;
 }
 
 .storyDesc {
@@ -106,6 +106,42 @@
   padding-top: 10px;
   font-weight: 200;
   line-height: 25px;
+}
+.scoreCtn {
+  width: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scoretrip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding-top: 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-right: 10px;
+}
+.scoreUber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding-top: 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.scoreUber span {
+  color: #06c167;
+}
+.scoretrip span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #34e0a1;
+  padding: 4px;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) {
@@ -170,6 +206,9 @@
 @media screen and (min-width: 1400px) {
   .storyImgCtn {
     flex: 1;
+  }
+  .storyImg {
+    width: 85%;
   }
 
   .storyDesc {

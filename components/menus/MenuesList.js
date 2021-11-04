@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import menuStyles from "../../styles/menues.module.css";
-import { Images } from "../../utility/util";
+
 import HeroButtons from "../hero/HeroButtons";
 import { motion, useAnimation } from "framer-motion";
 import { InView } from "react-intersection-observer";
-import { GrWifiNone } from "react-icons/gr";
+import Image from "next/image";
 
 const menuFoodPicVariant = {
   hidden: {
@@ -37,7 +37,8 @@ const menuFoodDescVariant = {
   },
 };
 
-const MenuesList = ({ classNameStyleIC, classNameStyleDesC }) => {
+const MenuesList = ({ classNameStyleIC, classNameStyleDesC, dataMenues }) => {
+  const Images = dataMenues.fields.menuImages;
   const [current, setCurrent] = useState(0);
   const length = Images.length;
   const timeout = useRef(null);
@@ -59,6 +60,8 @@ const MenuesList = ({ classNameStyleIC, classNameStyleDesC }) => {
     };
   }, [current, length]);
 
+  const details = dataMenues.fields.details.content[0].content[0].value;
+
   return (
     <div className={menuStyles.containerMenu} id="menues">
       <div className={classNameStyleIC}>
@@ -76,23 +79,27 @@ const MenuesList = ({ classNameStyleIC, classNameStyleDesC }) => {
                 ref={ref}
                 className={menuStyles.imageContainer}
               >
-                {Images.map(({ src, id }) => (
-                  <div
-                    className={
-                      id === current ? menuStyles.slideActive : menuStyles.slide
-                    }
-                    key={id}
-                  >
-                    {id === current && (
-                      <img
-                        key={id}
-                        src={src}
-                        alt="try"
-                        className={menuStyles.foodImageMenus}
-                      />
-                    )}
-                  </div>
-                ))}
+                {Images.map((imgMenu, id) => {
+                  return (
+                    <div
+                      className={
+                        id === current
+                          ? menuStyles.slideActive
+                          : menuStyles.slide
+                      }
+                      key={id}
+                    >
+                      {id === current && (
+                        <Image
+                          key={id}
+                          src={`https:${imgMenu.fields.file.url}`}
+                          alt="Menu Pictures"
+                          layout="fill"
+                        />
+                      )}
+                    </div>
+                  );
+                })}
               </motion.div>
             );
           }}
@@ -113,16 +120,11 @@ const MenuesList = ({ classNameStyleIC, classNameStyleDesC }) => {
                   ref={ref}
                   className={classNameStyleDesC}
                 >
-                  <h2>Food Menu</h2>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to m
-                  </p>
+                  <h2>{dataMenues.fields.title}</h2>
+                  <p>{details}</p>
                   <HeroButtons
-                    name="Food Menu"
-                    href="https://www.quandoo.com.au/place/mikys-italian-89295/widget?aid=146&utm_source=quandoo-partner&utm_medium=widget-link"
+                    name={dataMenues.fields.title}
+                    href={dataMenues.fields.menuPdf.fields.file.url}
                     classDynamicStyle={menuStyles.ButtonMenu}
                   />
                 </motion.div>

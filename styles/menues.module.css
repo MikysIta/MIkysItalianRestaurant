@@ -1,4 +1,6 @@
 .containerMenu {
+  max-width: 1920px;
+  margin: auto;
   width: 100%;
   margin-top: 40px;
   position: relative;
@@ -68,12 +70,14 @@
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 .slideActive {
+  position: relative;
   width: 100%;
   height: 100%;
   opacity: 1;
   transition-duration: 1s;
 }
 .slide {
+  position: relative;
   opacity: 0;
   transition-duration: 1s ease;
 }
@@ -81,7 +85,6 @@
 .foodImageMenus {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .containerMenuDesc {
@@ -195,7 +198,7 @@
   }
 
   .imageContainer {
-    width: 90%;
+    width: 75%;
     height: 40vh;
   }
 
@@ -323,5 +326,21 @@
 @media screen and (min-width: 1519px) {
   .containerMenu {
     width: 85%;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .imageContainer {
+    height: 25vh;
+  }
+
+  .containerInnerMenuDesc {
+    top: 250px;
+    left: -150px;
+  }
+
+  .containerInnerMenuDescSecond {
+    top: 250px;
+    left: 150px;
   }
 }

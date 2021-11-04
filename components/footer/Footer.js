@@ -7,7 +7,7 @@ const Footer = () => {
       <div className={footerStyles.ctnFooterInner}>
         <p>
           Copyright © 2021 <span>Mikys Italian Restaurant.</span> All rights
-          reserved by{" "}
+          reserved, Developed and Designed by{" "}
           <a href="https://www.linkedin.com/in/michele-merola/" target="_blank">
             Michele Merola
           </a>
