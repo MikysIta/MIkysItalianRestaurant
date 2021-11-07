@@ -1,9 +1,9 @@
 import React from "react";
 import contactStyles from "../../styles/contact.module.css";
 import { BsInstagram } from "react-icons/bs";
-import { Images } from "../../utility/util";
+import Image from "next/image";
 
-const Instagram = () => {
+const Instagram = ({ dataPictures }) => {
   return (
     <section className={contactStyles.instagramCtn}>
       <h4>
@@ -15,14 +15,18 @@ const Instagram = () => {
         </a>
       </h4>
       <div className={contactStyles.instagramCtnPic}>
-        {Images.map(({ id, src }) => {
+        {dataPictures.map((a, id) => {
           return (
             <div key={id} className={contactStyles.instagramPic}>
               <a
                 href="https://www.instagram.com/mikysitalian/?hl=en"
                 target="_blank"
               >
-                <img src={src} alt="Insta pic" />
+                <Image
+                  src={`https:${a.fields.file.url}`}
+                  alt="Insta pic"
+                  layout="fill"
+                />
               </a>
             </div>
           );

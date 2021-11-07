@@ -1,11 +1,24 @@
+import { useState } from "react";
 import logo from "../public/assets/cropped-Outlook-ioabnzky.png";
 import Image from "next/image";
 import Link from "next/link";
 import introStyles from "../styles/Intro.module.css";
 import menueStyles from "../styles/menues.module.css";
 import HeroButtons from "../components/hero/HeroButtons";
+import Loader from "../components/loader/Loader";
+import Router from "next/router";
 
 export default function Intro() {
+  const [loading, setLoading] = useState(false);
+
+  Router.events.on("routeChangeStart", (url) => {
+    return setLoading(true);
+  });
+
+  Router.events.on("routeChangeComplete", (url) => {
+    return setLoading(false);
+  });
+
   return (
     <div className={introStyles.containerIntro}>
       <Image src={logo} alt="logo" width={600} height={200} />
@@ -21,6 +34,7 @@ export default function Intro() {
           classDynamicStyle={menueStyles.ButtonMenu}
         />
       </div>
+      {loading && <Loader />}
 
       <div className={introStyles.buttonEnterContainer}>
         <Link href="/home">

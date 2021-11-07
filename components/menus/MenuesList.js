@@ -4,7 +4,6 @@ import menuStyles from "../../styles/menues.module.css";
 import HeroButtons from "../hero/HeroButtons";
 import { motion, useAnimation } from "framer-motion";
 import { InView } from "react-intersection-observer";
-import Image from "next/image";
 
 const menuFoodPicVariant = {
   hidden: {
@@ -90,11 +89,11 @@ const MenuesList = ({ classNameStyleIC, classNameStyleDesC, dataMenues }) => {
                       key={id}
                     >
                       {id === current && (
-                        <Image
+                        <img
                           key={id}
-                          src={`https:${imgMenu.fields.file.url}`}
+                          src={imgMenu.fields.file.url}
                           alt="Menu Pictures"
-                          layout="fill"
+                          className={menuStyles.foodImageMenus}
                         />
                       )}
                     </div>

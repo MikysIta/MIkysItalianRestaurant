@@ -1,39 +1,23 @@
 import React from "react";
 import contactStyles from "../../styles/contact.module.css";
 
-const OpeningHours = () => {
+const OpeningHours = ({ hours }) => {
+  const sortedArray = hours.sort(
+    (a, b) =>
+      new Date(a.sys.createdAt).getTime() - new Date(b.sys.createdAt).getTime()
+  );
   return (
     <section className={contactStyles.hoursContainer}>
       <h4>Opening Hour</h4>
       <ul className={contactStyles.hoursList}>
-        <li>
-          <span>Monday</span>
-          <span>09 am - 10pm</span>
-        </li>
-        <li>
-          <span>Tuesday</span>
-          <span>09 am - 10 pm</span>
-        </li>
-        <li>
-          <span>Wednesday</span>
-          <span>09 am - 10 pm</span>
-        </li>
-        <li>
-          <span>Thursday</span>
-          <span>09 am - 10 pm</span>
-        </li>
-        <li>
-          <span>Friday</span>
-          <span>11 am - 08 pm</span>
-        </li>
-        <li>
-          <span>Saturday</span>
-          <span>10 am - 11 pm</span>
-        </li>
-        <li>
-          <span>Sunday</span>
-          <span>Closed</span>
-        </li>
+        {sortedArray.map((day, id) => {
+          return (
+            <li key={id}>
+              <span>{day.fields.day}</span>
+              <span>{day.fields.hour}</span>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

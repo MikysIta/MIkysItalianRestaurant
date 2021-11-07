@@ -74,17 +74,23 @@
   width: 100%;
   height: 100%;
   opacity: 1;
+  object-fit: cover;
+  object-position: center;
   transition-duration: 1s;
 }
 .slide {
   position: relative;
   opacity: 0;
   transition-duration: 1s ease;
+  object-fit: cover;
+  object-position: center;
 }
 
 .foodImageMenus {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .containerMenuDesc {
@@ -210,7 +216,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-bottom: 60px;
   }
   .containerInnerMenuDesc {
     width: 100%;

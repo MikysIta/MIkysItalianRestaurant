@@ -4,40 +4,13 @@ import { BsInstagram } from "react-icons/bs";
 export const Social = [
   {
     name: "Facebook",
-    link: "",
+    link: "https://www.facebook.com/MikysItalian",
     icon: <GrFacebook />,
   },
   {
     name: "Instagram",
-    link: "",
+    link: "https://www.instagram.com/mikysitalian/?hl=en",
     icon: <BsInstagram />,
-  },
-];
-
-export const Images = [
-  {
-    id: 0,
-    src: "/assets/HeroImg.jpg",
-  },
-  {
-    id: 1,
-    src: "/assets/HeroImg2.jpg",
-  },
-  {
-    id: 2,
-    src: "/assets/HeroImg3.jpg",
-  },
-  {
-    id: 3,
-    src: "/assets/HeroImg.jpg",
-  },
-  {
-    id: 4,
-    src: "/assets/HeroImg2.jpg",
-  },
-  {
-    id: 5,
-    src: "/assets/HeroImg3.jpg",
   },
 ];
 

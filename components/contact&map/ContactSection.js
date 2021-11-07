@@ -6,14 +6,14 @@ import { Social } from "../../utility/util";
 import navStyles from "../../styles/Nav.module.css";
 import Instagram from "./Instagram";
 
-const ContactSection = () => {
+const ContactSection = ({ hours, insta }) => {
   return (
     <section className={contactStyles.contactContainer} id="contacts">
       <h1>GET IN TOUCH</h1>
       <div className={contactStyles.InfoContainer}>
         <Contact />
-        <OpeningHours />
-        <Instagram />
+        <OpeningHours hours={hours} />
+        <Instagram dataPictures={insta} />
       </div>
       <div className={contactStyles.aboutMikysContainer}>
         <h2 className={contactStyles.titleH2}>About Mikys</h2>

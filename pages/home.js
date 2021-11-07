@@ -14,10 +14,17 @@ export default function Home({
   restaurantPage,
   galleryData,
   menuesData,
+  tradingHoursData,
+  instagramData,
 }) {
   const imgHero = backgroundHero[0].fields.heroImages;
   const aboutSection = restaurantPage[0].fields;
   const imgSliderData = galleryData[0].fields.galleryImages;
+  const instaPicArray = instagramData[0].fields.pictures;
+  const sortedMenuData = menuesData.sort(
+    (a, b) =>
+      new Date(a.sys.createdAt).getTime() - new Date(b.sys.createdAt).getTime()
+  );
 
   return (
     <div className={styles.container}>
@@ -31,7 +38,7 @@ export default function Home({
         <p> Food and Drinks</p>
       </div>
 
-      {menuesData.map((data, id) => {
+      {sortedMenuData.map((data, id) => {
         return (
           <MenuesList
             key={id}
@@ -50,7 +57,7 @@ export default function Home({
         );
       })}
 
-      <ContactSection />
+      <ContactSection hours={tradingHoursData} insta={instaPicArray} />
     </div>
   );
 }
@@ -73,12 +80,23 @@ export async function getStaticProps() {
     content_type: "menuesPage",
   });
 
+  const resTradingHours = await client.getEntries({
+    content_type: "tradingHours",
+  });
+
+  const resInsta = await client.getEntries({
+    content_type: "instagramPic",
+  });
+
   return {
     props: {
       backgroundHero: resHero.items,
       restaurantPage: resRestPage.items,
       galleryData: resGallery.items,
       menuesData: resMenues.items,
+      tradingHoursData: resTradingHours.items,
+      instagramData: resInsta.items,
     },
+    revalidate: 60,
   };
 }
