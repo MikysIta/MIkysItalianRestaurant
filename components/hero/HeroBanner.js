@@ -80,8 +80,7 @@ const HeroBanner = () => {
             animate="visible"
             variants={subTitleVariant}
           >
-            Celebrate your every day dining in the beautiful atmosphere of our
-            restaurant
+            The Taste of Italy on Broadway Street
           </motion.p>
         </div>
         <div className={heroStyles.leftTitleButtons}>

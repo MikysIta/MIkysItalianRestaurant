@@ -3,15 +3,17 @@ import Link from "next/link";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import navStyles from "../../styles/Nav.module.css";
 import { Social } from "../../utility/util";
-import { useRouter } from "next/router";
+
 import HeroButtons from "../hero/HeroButtons";
 import { motion } from "framer-motion";
 
+import MediaQuery from "react-responsive";
 const navigation = [
   { name: "Home", href: "/home" },
   { name: "Menu", href: "#menues" },
-  { name: "About Us", href: "#about" },
-  { name: "Contact Us", href: "#contacts" },
+  { name: "Functions", href: "" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contacts" },
 ];
 
 const logoVariant = {
@@ -59,7 +61,6 @@ const socialVariant = {
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const router = useRouter();
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -140,17 +141,19 @@ const Navbar = () => {
               </motion.a>
             ))}
           </div>
-          <div className={navStyles.bookingBtnCtn}>
-            <HeroButtons
-              name="Book a Table"
-              href="https://www.quandoo.com.au/place/mikys-italian-89295/widget?aid=146&utm_source=quandoo-partner&utm_medium=widget-link"
-              classDynamicStyle={
-                navbar
-                  ? navStyles.ButtonBookingVisibile
-                  : navStyles.ButtonBooking
-              }
-            />
-          </div>
+          <MediaQuery minWidth={859}>
+            <div className={navStyles.bookingBtnCtn}>
+              <HeroButtons
+                name="Book a Table"
+                href="https://www.quandoo.com.au/place/mikys-italian-89295/widget?aid=146&utm_source=quandoo-partner&utm_medium=widget-link"
+                classDynamicStyle={
+                  navbar
+                    ? navStyles.ButtonBookingVisibile
+                    : navStyles.ButtonBooking
+                }
+              />
+            </div>
+          </MediaQuery>
         </ul>
       </div>
     </nav>

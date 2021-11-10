@@ -1,11 +1,14 @@
 import "../styles/globals.css";
 import Layout from "../components/layout/Layout";
+import StoreContextProvider from "../context/storeContext";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Layout>
-        <Component {...pageProps} />
+        <StoreContextProvider>
+          <Component {...pageProps} />
+        </StoreContextProvider>
       </Layout>
     </>
   );
