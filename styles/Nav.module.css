@@ -23,6 +23,61 @@
   outline: none;
   opacity: 1;
 }
+
+.navButton svg {
+  stroke: #b08f33;
+  transition: 0.2s;
+}
+.navButton svg g:first-child {
+  opacity: 1;
+  transition: opacity 0s 0.2s;
+}
+.navButton svg g:first-child line {
+  transition: transform 0.2s 0.2s;
+  transform: translateY(0px);
+}
+
+.navButton svg g:last-child {
+  opacity: 0;
+  transition: opacity 0s 0.2s;
+}
+.navButton svg g:last-child line {
+  transition: transform 0.2s;
+  transform: rotate(0deg);
+  transform-origin: center;
+}
+
+.navIconOpen svg {
+  stroke: #b08f33;
+}
+.navIconOpen svg g:first-child {
+  opacity: 0;
+}
+.navIconOpen svg g:first-child line {
+  transition: transform 0.2s;
+}
+.navIconOpen svg g:first-child line:first-child {
+  transform: translateY(7px);
+}
+.navIconOpen svg g:first-child line:last-child {
+  transform: translateY(-7px);
+}
+
+.navIconOpen svg g:last-child {
+  opacity: 1;
+}
+
+.navIconOpen svg g:last-child line {
+  transition: transform 0.2s 0.2s;
+}
+.navIconOpen svg g:last-child line:first-child {
+  transform: rotate(40deg);
+}
+
+.navIconOpen svg g:last-child line:last-child {
+  transform: rotate(-40deg);
+}
+
 .navIcon {
   font-size: 2.5rem;
   color: #b08f33;

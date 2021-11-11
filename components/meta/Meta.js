@@ -15,7 +15,7 @@ const Meta = ({ title, keywords, description }) => {
 Meta.defaultProps = {
   title: "Mikys Italian Restaurant",
   keywords:
-    "Mikys Italian Restaurant,Pizza,Italian Restaurant,authentic Italian restaurant, italian food, pasta, dining italian,creative cousine,child friendly restaurant ",
+    "Mikys Italian Restaurant,Pizza,Italian Restaurant,authentic Italian restaurant, italian food, pasta, dining italian,creative cousine,child friendly restaurant, Broadway Street ",
   description:
     "Mikys Italian Restaurant, embrace the authentic Italian Cousine, with a large selection of pizzas,pasta and exquisite nibbles, surprise your friends and family with a lunch or dinner that they will never forget ",
 };

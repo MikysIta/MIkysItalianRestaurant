@@ -25,6 +25,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="icon" href="favicon.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
           {/**Facebook */}
           <meta property="og:url" content="" />
           <meta property="og:type" content="website" />
