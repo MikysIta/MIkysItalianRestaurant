@@ -17,18 +17,20 @@ const Instagram = ({ dataPictures }) => {
       <div className={contactStyles.instagramCtnPic}>
         {dataPictures.map((a, id) => {
           return (
-            <div key={id} className={contactStyles.instagramPic}>
-              <a
-                href="https://www.instagram.com/mikysitalian/?hl=en"
-                target="_blank"
-              >
+            <a
+              href="https://www.instagram.com/mikysitalian/?hl=en"
+              target="_blank"
+              key={id}
+            >
+              <div className={contactStyles.instagramPic}>
                 <Image
                   src={`https:${a.fields.file.url}`}
                   alt="Insta pic"
                   layout="fill"
+                  className="widthHeight"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           );
         })}
       </div>

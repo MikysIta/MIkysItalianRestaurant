@@ -24,25 +24,25 @@
   text-align: center;
   padding-top: 20px;
   color: #b08f33;
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 200;
 }
 
 .functionCtnInner p {
   color: white;
   text-align: center;
-  font-size: 1.2rem;
-  width: 50%;
+  font-size: 1rem;
+  width: 90%;
   font-family: "Montserrat", sans-serif;
-  padding-top: 10px;
+  padding-top: 25px;
   font-weight: 200;
   line-height: 25px;
 }
 
 /* Enquire Form*/
 .outerFormCtn {
-  width: 80%;
-  margin: auto;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +62,7 @@
   height: 100%;
 }
 .nameEmail {
-  width: 40%;
+  width: 96%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -70,7 +70,7 @@
   gap: 6px;
 }
 .functionsGuestNumber {
-  width: 40%;
+  width: 96%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -114,7 +114,7 @@
 }
 .inputs input {
   padding: 15px;
-  width: 40%;
+  width: 96%;
   font-size: 1.2rem;
   border-radius: 2px;
   border: 2px solid #b08f33;
@@ -122,14 +122,14 @@
   color: #1093f4;
 }
 .inputs label {
-  width: 40%;
+  width: 96%;
   color: aliceblue;
   padding-bottom: 6px;
 }
 .inputs textarea {
   font-family: "Playfair Display", serif;
   padding: 3px;
-  width: 40%;
+  width: 96%;
   font-size: 1.3rem;
   color: #1093f4;
 }
@@ -143,10 +143,10 @@
 }
 
 .inputsBtn input {
-  width: 20%;
+  width: 30%;
   padding: 12px;
   color: #b08f33;
-  margin-right: 15px;
+
   font-family: "Playfair Display", serif;
   font-size: 1.1rem;
   font-weight: 200;
@@ -160,4 +160,153 @@
 
 .inputsBtn input:hover {
   transform: scale(1.1);
+}
+
+.okStatusDeliveryCtn {
+  background-color: green;
+  margin-top: 5px;
+
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.okStatusDeliveryCtn p {
+  text-align: center;
+  padding: 5px;
+  color: white;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .functionCtnInner h1 {
+    font-size: 4rem;
+  }
+  .functionCtnInner p {
+    font-size: 1.2rem;
+    width: 80%;
+  }
+  .okStatusDeliveryCtn {
+    width: 60%;
+  }
+
+  .okStatusDeliveryCtn p {
+    font-size: 0.8rem;
+  }
+
+  /* Enquire Form*/
+
+  .outerFormCtn {
+    width: 80%;
+    margin: auto;
+  }
+  .nameEmail {
+    width: 90%;
+  }
+  .functionsGuestNumber {
+    width: 90%;
+  }
+  .inputs input {
+    width: 90%;
+  }
+  .inputs label {
+    width: 90%;
+  }
+  .inputs textarea {
+    font-family: "Playfair Display", serif;
+
+    width: 90%;
+  }
+
+  .inputsBtn input {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .functionCtnInner p {
+    font-size: 1.4rem;
+    line-height: 35px;
+  }
+  .okStatusDeliveryCtn {
+    width: 40%;
+  }
+  .okStatusDeliveryCtn p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .nameEmail {
+    width: 70%;
+  }
+  .functionsGuestNumber {
+    width: 70%;
+  }
+  .inputs input {
+    width: 70%;
+  }
+  .inputs label {
+    width: 70%;
+  }
+  .inputs textarea {
+    font-family: "Playfair Display", serif;
+
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1699px) {
+  .functionCtnInner p {
+    width: 70%;
+  }
+
+  .nameEmail {
+    width: 50%;
+  }
+  .functionsGuestNumber {
+    width: 50%;
+  }
+  .inputs input {
+    width: 50%;
+  }
+  .inputs label {
+    width: 50%;
+  }
+  .inputs textarea {
+    font-family: "Playfair Display", serif;
+
+    width: 50%;
+  }
+  .inputsBtn input {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 2799px) {
+  .functionCtnInner p {
+    width: 50%;
+  }
+
+  .nameEmail {
+    width: 30%;
+  }
+  .functionsGuestNumber {
+    width: 30%;
+  }
+  .inputs input {
+    width: 30%;
+  }
+  .inputs label {
+    width: 30%;
+  }
+  .inputs textarea {
+    font-family: "Playfair Display", serif;
+
+    width: 30%;
+  }
+  .inputsBtn input {
+    width: 10%;
+  }
 }

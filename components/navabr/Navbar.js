@@ -3,11 +3,11 @@ import Link from "next/link";
 
 import navStyles from "../../styles/Nav.module.css";
 import { Social } from "../../utility/util";
-
+import { useMediaQuery } from "react-responsive";
 import HeroButtons from "../hero/HeroButtons";
 import { motion } from "framer-motion";
 
-import MediaQuery from "react-responsive";
+//import MediaQuery from "react-responsive";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Menu", href: "#menues" },
@@ -61,6 +61,15 @@ const socialVariant = {
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const [desktop, setDesktop] = useState(false);
+
+  const isCloseToDesktop = useMediaQuery({
+    query: "(min-width: 859px)",
+  });
+
+  useEffect(() => {
+    isCloseToDesktop ? setDesktop(true) : setDesktop(false);
+  }, [isCloseToDesktop]);
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -73,6 +82,7 @@ const Navbar = () => {
       setNavbar(false);
     }
   };
+
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", changeBg);
   }
@@ -110,13 +120,13 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <g>
-                <line x1="0" y1="17" x2="48" y2="17" stroke-width="1" />
-                <line x1="0" y1="31" x2="48" y2="31" stroke-width="1" />
+                <line x1="0" y1="17" x2="48" y2="17" strokeWidth="1" />
+                <line x1="0" y1="31" x2="48" y2="31" strokeWidth="1" />
               </g>
 
               <g>
-                <line x1="0" y1="24" x2="48" y2="24" stroke-width="1" />
-                <line x1="0" y1="24" x2="48" y2="24" stroke-width="1" />
+                <line x1="0" y1="24" x2="48" y2="24" strokeWidth="1" />
+                <line x1="0" y1="24" x2="48" y2="24" strokeWidth="1" />
               </g>
             </svg>
           </button>
@@ -161,7 +171,7 @@ const Navbar = () => {
               </motion.a>
             ))}
           </div>
-          <MediaQuery minWidth={859}>
+          {desktop ? (
             <div className={navStyles.bookingBtnCtn}>
               <HeroButtons
                 name="Book a Table"
@@ -173,7 +183,7 @@ const Navbar = () => {
                 }
               />
             </div>
-          </MediaQuery>
+          ) : null}
         </ul>
       </div>
     </nav>
