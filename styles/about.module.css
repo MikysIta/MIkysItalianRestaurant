@@ -108,9 +108,9 @@
   line-height: 25px;
 }
 .scoreCtn {
-  width: 12%;
+  width: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 .scoretrip {
@@ -119,7 +119,7 @@
   align-items: center;
   gap: 4px;
   padding-top: 8px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
   padding-right: 10px;
 }
@@ -129,8 +129,9 @@
   align-items: center;
   gap: 4px;
   padding-top: 8px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
+  padding-right: 10px;
 }
 .scoreUber span {
   color: #06c167;
@@ -144,7 +145,45 @@
   border-radius: 50%;
 }
 
+.scoreFacebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding-top: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.scoreFacebook span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4px;
+  border-radius: 50%;
+}
+.iconFb {
+  color: #1093f4;
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
 @media screen and (min-width: 768px) {
+  .scoretrip {
+    font-size: 1.5rem;
+  }
+  .scoreUber {
+    font-size: 1.5rem;
+  }
+
+  .scoreFacebook {
+    font-size: 1.5rem;
+  }
+
+  .iconFb {
+    font-size: 1.7rem;
+  }
   .aboutContainer h1 {
     font-size: 3rem;
   }

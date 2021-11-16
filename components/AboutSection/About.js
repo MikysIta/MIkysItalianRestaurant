@@ -2,6 +2,7 @@ import React from "react";
 import aboutStyles from "../../styles/about.module.css";
 import Image from "next/image";
 import { FaTripadvisor } from "react-icons/fa";
+import { GrFacebook } from "react-icons/gr";
 
 const About = ({ aboutData }) => {
   const paragraph = aboutData.paragraph.content[0].content[0].value;
@@ -30,6 +31,16 @@ const About = ({ aboutData }) => {
           >
             Uber <span>Eats</span>
             4.6/5
+          </a>
+          <a
+            href="https://www.facebook.com/MikysItalian/reviews/?ref=page_internal"
+            target="_blank"
+            className={aboutStyles.scoreFacebook}
+          >
+            <span>
+              <GrFacebook className={aboutStyles.iconFb} />
+            </span>{" "}
+            5/5
           </a>
         </div>
       </div>
@@ -60,5 +71,3 @@ const About = ({ aboutData }) => {
 };
 
 export default About;
-
-FaTripadvisor;

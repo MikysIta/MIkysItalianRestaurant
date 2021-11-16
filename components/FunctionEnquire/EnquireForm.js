@@ -6,6 +6,7 @@ const EnquireForm = () => {
   const [email, setEmail] = useState(null);
   const [error, setError] = useState("");
   const [mexDelivered, setMexDelivered] = useState("");
+  const [status, setStatus] = useState(false);
   const userId = process.env.NEXT_PUBLIC_USER_ID_EMAILJS;
   const handleChange = (e) => {
     return setEmail(e.target.value);
@@ -14,10 +15,12 @@ const EnquireForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     email
-      ? emailjs
+      ? setStatus(true) &
+        emailjs
           .sendForm("service_1767zhj", "template_hwib3yj", e.target, userId)
           .then(
             (result) => {
+              setStatus(false);
               setMexDelivered("Message Delivered") &
                 setTimeout(() => {
                   setMexDelivered("");
@@ -76,7 +79,10 @@ const EnquireForm = () => {
           </div>
         ) : null}
         <div className={functionStyles.inputsBtn}>
-          <input type="submit" value="Submit" />
+          <input
+            type="submit"
+            value={!status ? "Submit" : "Sending your Enquire..."}
+          />
         </div>
       </form>
     </div>
