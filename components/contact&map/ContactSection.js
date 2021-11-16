@@ -18,10 +18,9 @@ const ContactSection = ({ hours, insta }) => {
       <div className={contactStyles.aboutMikysContainer}>
         <h2 className={contactStyles.titleH2}>About Mikys</h2>
         <p>
-          Mikys is an Lorem ipsum porta placerat rutrum aliquet platea accumsan,
-          molestie eros aliquet adipiscing egestas ultrices, leo convallis dolor
-          nisl integer potenti fringilla aenean condimentum ipsum maecenas
-          aliquet consectetur.
+          Mikys a child friendly restaurant a place of meeting and simply a fantastic experience.
+          We acept all sort of payment from card like (Visa,Mastercard) to cash and digital card.
+          
         </p>
       </div>
       <h2 className={contactStyles.titleH2}>Follow Us</h2>

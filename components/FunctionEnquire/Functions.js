@@ -7,13 +7,9 @@ const Functions = () => {
       <div className={functionStyles.functionCtnInner}>
         <h1>Functions</h1>
         <p>
-          Lorem IpsumLorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book galley of type
-          and scrambled .
+          With more than 15 years of experience all around the world, we are able to offer the perfect
+          function with tasty italian authentic food and crazy drinks.
+          Send us an enquire and we will help you to organize your ideal function and a personalize menu.
         </p>
         <EnquireForm />
       </div>

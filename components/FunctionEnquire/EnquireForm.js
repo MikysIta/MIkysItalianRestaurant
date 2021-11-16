@@ -15,7 +15,7 @@ const EnquireForm = () => {
     e.preventDefault();
     email
       ? emailjs
-          .sendForm("service_yqovzhg", "template_tpwsfgs", e.target, userId)
+          .sendForm("service_1767zhj", "template_hwib3yj", e.target, userId)
           .then(
             (result) => {
               setMexDelivered("Message Delivered") &
