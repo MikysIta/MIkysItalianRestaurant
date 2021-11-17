@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
-  target: "experimental-serverless-trace",
+  target: "serverless",
   swcMinify: true,
   images: {
     domains: ["images.ctfassets.net"],

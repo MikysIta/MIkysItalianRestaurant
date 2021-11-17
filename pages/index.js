@@ -100,7 +100,6 @@ export async function getStaticProps() {
       tradingHoursData: resTradingHours.items,
       instagramData: resInsta.items,
     },
-    revalidate: 60,
   };
 }
 
