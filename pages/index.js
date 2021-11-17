@@ -4,7 +4,7 @@ import { client } from "../contentful/Contentful";
 import About from "../components/AboutSection/About";
 import HeroBanner from "../components/hero/HeroBanner";
 import HeroSlideImages from "../components/hero/HeroSlideImages";
-import ImageSliderCenter from "../components/imageSliderCenter/imageSliderCenter";
+import ImageSliderCenter from "../components/imageSliderCenter/ImageSliderCenter";
 import MenuesList from "../components/menus/MenuesList";
 import menuStyles from "../styles/menues.module.css";
 import styles from "../styles/Home.module.css";
@@ -103,6 +103,5 @@ export async function getStaticProps() {
     revalidate: 60,
   };
 }
-
 
 //Michele developed and designed
