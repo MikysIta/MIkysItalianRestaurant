@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import sliderStyles from "../../styles/imageSlider.module.css";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 
