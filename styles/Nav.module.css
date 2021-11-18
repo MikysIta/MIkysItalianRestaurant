@@ -117,7 +117,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 80vh;
   background-color: white;
   width: 100%;
 
@@ -183,6 +183,38 @@
   font-family: "Playfair Display", serif;
   font-weight: 500;
   opacity: 1;
+}
+
+@media only screen and (min-device-width: 375px) and (orientation: landscape) {
+  .showNav {
+    overflow-y: scroll;
+
+    padding: 20px;
+  }
+  .containerNav {
+    height: 20vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 8px;
+  }
+  .containerNavWhite {
+    height: 20vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 8px;
+  }
+  .navHeader {
+    height: 20vh;
+  }
+  .navLinks li {
+    padding: 0.7rem;
+  }
+  .navSocial {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {

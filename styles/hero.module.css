@@ -186,6 +186,20 @@
   }
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .leftTitleContainer h1 {
+    font-size: 3rem;
+  }
+
+  .leftTitleContainer p {
+    font-size: 1.3rem;
+  }
+  .herobtn,
+  .herobtnTwo {
+    font-size: 1.1rem;
+  }
+}
+
 @media screen and (min-width: 1300px) {
   .leftContainerInner {
     align-items: flex-start;

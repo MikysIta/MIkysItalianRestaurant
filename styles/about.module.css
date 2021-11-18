@@ -236,6 +236,29 @@
   }
 }
 
+@media only screen and (min-device-width: 360px) and (max-device-width: 830px) and (orientation: landscape) {
+  .storyContainer {
+    width: 70%;
+    flex-direction: column;
+  }
+  .storyImgCtn {
+    width: 80%;
+  }
+  .storyDesc {
+    width: 80%;
+  }
+  .storyDescInner h2 {
+    margin-top: 15px;
+    text-align: center;
+  }
+  .storyDescInner h3 {
+    text-align: center;
+  }
+  .storyDescInner p {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .storyContainer {
     width: 70%;

@@ -273,6 +273,40 @@
   }
 }
 
+@media only screen and (min-device-width: 360px) and (max-device-width: 830px) and (orientation: landscape) {
+  .containerMenuH1 {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .containerInnerMenu {
+    width: 80%;
+  }
+  .imageContainer {
+    height: 70vh;
+  }
+  .containerSecondInnerMenu {
+    width: 80%;
+  }
+  .containerMenuDesc {
+    margin-bottom: 15px;
+  }
+  .containerInnerMenuDescSecond {
+    padding: 0px;
+  }
+  .containerInnerMenuDescSecond p {
+    line-height: 24px;
+    margin-bottom: 0px;
+  }
+  .containerInnerMenuDesc {
+    padding: 0px;
+  }
+  .containerInnerMenuDesc p {
+    line-height: 24px;
+    margin-bottom: 0px;
+  }
+}
+
 @media screen and (min-width: 1249px) {
   .containerMenu {
     margin-bottom: 100px;
