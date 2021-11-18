@@ -147,6 +147,9 @@ const Navbar = () => {
               animate="visible"
               variants={navVariant}
               key={item.name}
+              onClick={()=>{
+                return setToggle(false)
+              }}
             >
               <Link href={item.href}>
                 <a className={navbar ? navStyles.navLinksColorChange : null}>
