@@ -11,6 +11,7 @@ import styles from "../styles/Home.module.css";
 import ContactSection from "../components/contact&map/ContactSection";
 import Meta from "../components/meta/Meta";
 import Functions from "../components/FunctionEnquire/Functions";
+import Map from "../components/contact&map/Map";
 
 export default function Home({
   //backgroundHero,
@@ -63,6 +64,7 @@ export default function Home({
       })}
       <Functions />
       <ContactSection hours={tradingHoursData} insta={instaPicArray} />
+      <Map />
     </div>
   );
 }
