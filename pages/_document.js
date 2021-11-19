@@ -27,14 +27,17 @@ class MyDocument extends Document {
           <link rel="icon" href="favicon.png" />
           <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
           {/**Facebook */}
-          <meta property="og:url" content="" />
+          <meta
+            property="og:url"
+            content="https://www.facebook.com/MikysItalian"
+          />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Mikys Italian Restaurant" />
           <meta
             property="og:description"
             content="Mikys Italian Restaurant, embrace the authentic Italian Cousine, with a large selection of pizzas,pasta and exquisite nibbles, surprise your friends and family with a lunch or dinner that they will never forget "
           />
-          <meta property="og:image" content="/HeroImg.jpg" />
+          <meta property="og:image" content="/assets/HeroImg.jpg" />
           <meta property="og:image:width" content="400" />
           <meta property="og:image:height" content="300" />
         </Head>

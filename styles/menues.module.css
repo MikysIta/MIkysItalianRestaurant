@@ -370,7 +370,7 @@
 
 @media screen and (min-width: 2200px) {
   .imageContainer {
-    height: 25vh;
+    height: 50vh;
   }
 
   .containerInnerMenuDesc {
