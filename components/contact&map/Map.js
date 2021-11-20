@@ -6,7 +6,7 @@ const Map = () => {
     <div className={contactStyles.ctnMap}>
       <iframe
         className={contactStyles.map}
-        src="https://maps.google.com/maps?q=88%20broadway%20Crawley%2C%20Nedlands%2C%20WA%206009&t=m&z=12&output=embed&iwloc=near"
+        src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJZX_z5mmlMioRjJ5ofUKWjZA&key=${process.env.NEXT_PUBLIC_MAP_API_KEY}`}
       />
     </div>
   );
