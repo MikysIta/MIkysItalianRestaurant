@@ -49,12 +49,14 @@ export default function Home({
           <MenuesList
             key={id}
             classNameStyleIC={
-              data.fields.title === "Food Menu"
+              (data.fields.title === "Food Menu") &
+              (data.fields.title === "Set Menu")
                 ? menuStyles.containerInnerMenu
                 : menuStyles.containerSecondInnerMenu
             }
             classNameStyleDesC={
-              data.fields.title === "Food Menu"
+              (data.fields.title === "Food Menu") &
+              (data.fields.title === "Set Menu")
                 ? menuStyles.containerInnerMenuDesc
                 : menuStyles.containerInnerMenuDescSecond
             }
