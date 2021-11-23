@@ -107,4 +107,4 @@ export async function getStaticProps() {
   };
 }
 
-//Michele developed and designed//
+//Michele developed and designed///
