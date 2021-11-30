@@ -121,11 +121,17 @@ const MenuesList = ({ classNameStyleIC, classNameStyleDesC, dataMenues }) => {
                 >
                   <h2>{dataMenues.fields.title}</h2>
                   <p>{details}</p>
-                  <HeroButtons
-                    name={dataMenues.fields.title}
-                    href={dataMenues.fields.menuPdf.fields.file.url}
-                    classDynamicStyle={menuStyles.ButtonMenu}
-                  />
+                  {dataMenues.fields.title === "Set Menu" ? (
+                    <p className={menuStyles.setMenuBtn}>
+                      Menu available on call
+                    </p>
+                  ) : (
+                    <HeroButtons
+                      name={dataMenues.fields.title}
+                      href={dataMenues.fields.menuPdf.fields.file.url}
+                      classDynamicStyle={menuStyles.ButtonMenu}
+                    />
+                  )}
                 </motion.div>
               );
             }}

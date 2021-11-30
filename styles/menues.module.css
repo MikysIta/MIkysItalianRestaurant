@@ -172,6 +172,10 @@
   cursor: pointer;
 }
 
+.setMenuBtn {
+  color: red !important;
+}
+
 @media screen and (min-width: 768px) {
   .containerMenu {
     flex-direction: row;
