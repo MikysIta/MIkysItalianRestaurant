@@ -93,7 +93,7 @@ const Navbar = () => {
     >
       <div className={navStyles.navCenter}>
         <div className={navStyles.navHeader}>
-          <Link href="/home">
+          <Link href="/">
             <motion.img
               initial="hidden"
               animate="visible"
@@ -147,8 +147,8 @@ const Navbar = () => {
               animate="visible"
               variants={navVariant}
               key={item.name}
-              onClick={()=>{
-                return setToggle(false)
+              onClick={() => {
+                return setToggle(false);
               }}
             >
               <Link href={item.href}>
