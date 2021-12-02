@@ -64,6 +64,16 @@ const About = ({ aboutData }) => {
             <h3>{aboutData.subtitleParagraph}</h3>
             <p>{paragraph}</p>
           </div>
+          <div className={aboutStyles.logoGuruCtn}>
+            <div className={aboutStyles.logoGuruInnerCtn}>
+              <a
+                href="https://restaurantguru.com/Mikys-Italian-Restaurant-Perth"
+                target="_blank"
+              >
+                <img src="/assets/LogoGuru.jpg" alt="guru award" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -169,6 +169,34 @@
   font-size: 1.4rem;
 }
 
+.logoGuruCtn {
+  width: 70%;
+  height: 100%;
+
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoGuruInnerCtn {
+  width: 130px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoGuruInnerCtn a {
+  width: 100%;
+  height: 100%;
+}
+
+.logoGuruInnerCtn img {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .scoretrip {
     font-size: 1.5rem;
@@ -234,6 +262,10 @@
     padding-top: 6px;
     font-weight: 200;
   }
+  .logoGuruCtn {
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 830px) and (orientation: landscape) {
@@ -261,6 +293,9 @@
 
 @media screen and (min-width: 1200px) {
   .storyContainer {
+    width: 70%;
+  }
+  .logoGuruCtn {
     width: 70%;
   }
 }
