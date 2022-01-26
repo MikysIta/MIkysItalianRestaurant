@@ -39,6 +39,7 @@ const HeroSlideImages = ({ slides }) => {
                   alt="try"
                   layout="fill"
                   className={heroStyles.foodImage}
+                  priority
                 />
               )}
             </div>

@@ -23,7 +23,9 @@
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.0.0-beta.7",
+    "@zeit/next-css": "^1.0.1",
     "eslint": "^7.0.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "next-purgecss": "^4.0.0"
   }
 }
