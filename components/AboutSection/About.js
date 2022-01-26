@@ -53,6 +53,7 @@ const About = ({ aboutData }) => {
                   src={`https:${pic.fields.file.url}`}
                   alt="owner"
                   layout="fill"
+                  objectFit="cover"
                 />
               </div>
             );

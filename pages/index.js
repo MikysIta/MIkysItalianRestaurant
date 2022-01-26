@@ -1,17 +1,31 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../context/storeContext";
 import { client } from "../contentful/Contentful";
-import About from "../components/AboutSection/About";
+//import About from "../components/AboutSection/About";
 import HeroBanner from "../components/hero/HeroBanner";
 import HeroSlideImages from "../components/hero/HeroSlideImages";
-import ImageSliderCenter from "../components/imageSliderCenter/ImageSliderCenter";
-import MenuesList from "../components/menus/MenuesList";
+//import ImageSliderCenter from "../components/imageSliderCenter/ImageSliderCenter";
+//import MenuesList from "../components/menus/MenuesList";
 import menuStyles from "../styles/menues.module.css";
 import styles from "../styles/Home.module.css";
-import ContactSection from "../components/contact&map/ContactSection";
+//import ContactSection from "../components/contact&map/ContactSection";
 import Meta from "../components/meta/Meta";
-import Functions from "../components/FunctionEnquire/Functions";
-import Map from "../components/contact&map/Map";
+//import Functions from "../components/FunctionEnquire/Functions";
+import dynamic from "next/dynamic";
+
+const DynamicAbout = dynamic(() => import("../components/AboutSection/About"));
+const DynamicSlider = dynamic(() =>
+  import("../components/imageSliderCenter/ImageSliderCenter")
+);
+const DynamicMap = dynamic(() => import("../components/contact&map/Map"));
+const DynamicFunctions = dynamic(() =>
+  import("../components/FunctionEnquire/Functions")
+);
+const DynamicContacts = dynamic(() =>
+  import("../components/contact&map/ContactSection")
+);
+
+const DynamicMenues = dynamic(() => import("../components/menus/MenuesList"));
 
 export default function Home({
   restaurantPage,
@@ -31,8 +45,8 @@ export default function Home({
       <Meta />
       <HeroSlideImages slides={imgHero} />
       <HeroBanner />
-      <About aboutData={aboutSection} />
-      <ImageSliderCenter dataImg={imgSliderData} />
+      <DynamicAbout aboutData={aboutSection} />
+      <DynamicSlider dataImg={imgSliderData} />
       <div className={menuStyles.containerMenuH1}>
         <h1> The Menus</h1>
         <p> Food and Drinks</p>
@@ -40,7 +54,7 @@ export default function Home({
 
       {sortedMenuData.map((data, id) => {
         return (
-          <MenuesList
+          <DynamicMenues
             key={id}
             classNameStyleIC={
               data.fields.title === "Food Menu" ||
@@ -58,9 +72,9 @@ export default function Home({
           />
         );
       })}
-      <Functions />
-      <ContactSection hours={tradingHoursData} insta={instaPicArray} />
-      <Map />
+      <DynamicFunctions />
+      <DynamicContacts hours={tradingHoursData} insta={instaPicArray} />
+      <DynamicMap />
     </div>
   );
 }
