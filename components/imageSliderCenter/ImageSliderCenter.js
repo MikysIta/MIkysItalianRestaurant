@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import sliderStyles from "../../styles/imageSlider.module.css";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
-
+import Image from "next/image";
 const ImageSliderCenter = ({ dataImg }) => {
   const [current, setCurrent] = useState(0);
 
@@ -23,10 +23,11 @@ const ImageSliderCenter = ({ dataImg }) => {
             <div className={sliderStyles.slideInner} key={index}>
               {index === current && (
                 <div className={sliderStyles.sliderInner}>
-                  <img
-                    src={slide.fields.file.url}
+                  <Image
+                    src={`https:${slide.fields.file.url}`}
                     alt="gallery"
-                    className={sliderStyles.imgGallery}
+                    layout="fill"
+                    objectFit="cover"
                   />
                 </div>
               )}

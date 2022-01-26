@@ -1,21 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
-
+import Image from "next/image";
 import heroStyles from "../../styles/hero.module.css";
 import menuStyles from "../../styles/menues.module.css";
-import { motion } from "framer-motion";
-
-const imageVariant = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 0.5,
-
-    transition: {
-      duration: 1,
-    },
-  },
-};
 
 const HeroSlideImages = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -47,13 +33,11 @@ const HeroSlideImages = ({ slides }) => {
               key={id}
             >
               {id === current && (
-                <motion.img
-                  initial="hidden"
-                  animate="visible"
-                  variants={imageVariant}
+                <Image
                   key={id}
-                  src={slide.fields.file.url}
+                  src={`https:${slide.fields.file.url}`}
                   alt="try"
+                  layout="fill"
                   className={heroStyles.foodImage}
                 />
               )}

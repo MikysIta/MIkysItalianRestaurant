@@ -70,7 +70,7 @@ const About = ({ aboutData }) => {
                 href="https://restaurantguru.com/Mikys-Italian-Restaurant-Perth"
                 target="_blank"
               >
-                <img src="/assets/LogoGuru.jpg" alt="guru award" />
+                <img src="/assets/LogoGuru.avif" alt="guru award" />
               </a>
             </div>
           </div>

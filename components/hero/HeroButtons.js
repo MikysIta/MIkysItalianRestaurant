@@ -1,5 +1,5 @@
 import React from "react";
-import heroStyles from "../../styles/hero.module.css";
+
 import { motion } from "framer-motion";
 
 const HeroButtons = ({ href, name, classDynamicStyle, animationBtn }) => {

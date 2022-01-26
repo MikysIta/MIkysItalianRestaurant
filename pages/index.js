@@ -14,23 +14,17 @@ import Functions from "../components/FunctionEnquire/Functions";
 import Map from "../components/contact&map/Map";
 
 export default function Home({
-  //backgroundHero,
   restaurantPage,
   galleryData,
-  //menuesData,
+
   tradingHoursData,
   instagramData,
 }) {
   const { imgHero, sortedMenuData } = useContext(StoreContext);
 
-  //const imgHero = backgroundHero[0].fields.heroImages;
   const aboutSection = restaurantPage[0].fields;
   const imgSliderData = galleryData[0].fields.galleryImages;
   const instaPicArray = instagramData[0].fields.pictures;
-  //const sortedMenuData = menuesData.sort(
-  //  (a, b) =>
-  //    new Date(a.sys.createdAt).getTime() - new Date(b.sys.createdAt).getTime()
-  //);
 
   return (
     <div className={styles.container}>
@@ -71,21 +65,13 @@ export default function Home({
   );
 }
 
-export async function getStaticProps() {
-  {
-    /*const resHero = await client.getEntries({ content_type: "heroBackground" });*/
-  }
-
+export async function getServerSideProps() {
   const resRestPage = await client.getEntries({
     content_type: "theRestaurantPage",
   });
   const resGallery = await client.getEntries({
     content_type: "gallery",
   });
-
-  //const resMenues = await client.getEntries({
-  //  content_type: "menuesPage",
-  // });
 
   const resTradingHours = await client.getEntries({
     content_type: "tradingHours",
@@ -97,10 +83,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      //backgroundHero: resHero.items,
       restaurantPage: resRestPage.items,
       galleryData: resGallery.items,
-      //menuesData: resMenues.items,
+
       tradingHoursData: resTradingHours.items,
       instagramData: resInsta.items,
     },

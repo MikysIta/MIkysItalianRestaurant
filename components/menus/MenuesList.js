@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import menuStyles from "../../styles/menues.module.css";
-
+import Image from "next/image";
 import HeroButtons from "../hero/HeroButtons";
 import { motion, useAnimation } from "framer-motion";
 import { InView } from "react-intersection-observer";
@@ -89,11 +89,12 @@ const MenuesList = ({ classNameStyleIC, classNameStyleDesC, dataMenues }) => {
                       key={id}
                     >
                       {id === current && (
-                        <img
+                        <Image
                           key={id}
-                          src={imgMenu.fields.file.url}
+                          src={`https:${imgMenu.fields.file.url}`}
                           alt="Menu Pictures"
-                          className={menuStyles.foodImageMenus}
+                          layout="fill"
+                          objectFit="cover"
                         />
                       )}
                     </div>

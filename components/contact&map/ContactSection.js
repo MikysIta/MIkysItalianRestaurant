@@ -3,9 +3,8 @@ import contactStyles from "../../styles/contact.module.css";
 import Contact from "./Contact";
 import OpeningHours from "./OpeningHours";
 import { Social } from "../../utility/util";
-import navStyles from "../../styles/Nav.module.css";
+
 import Instagram from "./Instagram";
-import Map from "./Map";
 
 const ContactSection = ({ hours, insta }) => {
   return (

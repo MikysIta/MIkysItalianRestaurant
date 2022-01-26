@@ -27,7 +27,6 @@ const Instagram = ({ dataPictures }) => {
                   src={`https:${a.fields.file.url}`}
                   alt="Insta pic"
                   layout="fill"
-                  className="widthHeight"
                 />
               </div>
             </a>
