@@ -17,7 +17,7 @@ const BookingForm = ({ setopenmodal }) => {
       .sendForm("service_1tndgoi", "template_xu28zqf", form.current, userId)
       .then(
         (result) => {
-          setBooked("Your Table is been Reserved") &
+          setBooked("Your booking has been confirmed.") &
             setTimeout(() => {
               setBooked("");
               setopenmodal(false);

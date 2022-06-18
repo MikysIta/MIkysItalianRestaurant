@@ -46,7 +46,7 @@
   }
   .modalCloseLogo{
     width: 180px;
-  
+    height: 90px;
   }
 
   .modalCtnTitle{
@@ -99,7 +99,7 @@
   }
   .modalTextAreaCtn{
     width: 100%;
-   padding-left: 15px;
+   padding-left: 7px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,17 +146,26 @@ padding-top: 15px;
     padding:6px;
     border-radius:5px
   }
+  
   .modalinputCtn input[type=date]{
     border: 1px solid black;
     width: 80%;
     padding:6px;
-    border-radius:5px
+    border-radius:5px;
+    -webkit-width: 80%;
+    -moz--width: 80%;
+    -O--width: 80%;
+    -ms--width: 80%;
   }
   .modalinputCtn input[type=time]{
     width: 80%;
     border: 1px solid black;
     padding:6px;
-    border-radius:5px
+    border-radius:5px;
+    -webkit-width: 80%;
+    -moz--width: 80%;
+    -O--width: 80%;
+    -ms--width: 80%;
   }
   .modalinputCtn input[type=number]{
     width: 80%;
