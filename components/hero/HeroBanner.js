@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import heroStyles from "../../styles/hero.module.css";
 import HeroButtons from "./HeroButtons";
 import { motion } from "framer-motion";
@@ -67,7 +67,7 @@ const btnHeroTwoVariant = {
   },
 };
 
-const HeroBanner = () => {
+const HeroBanner = ({ setopenModal }) => {
   return (
     <div className={heroStyles.leftContainer}>
       <div className={heroStyles.leftContainerInner}>
@@ -84,12 +84,18 @@ const HeroBanner = () => {
           </motion.p>
         </div>
         <div className={heroStyles.leftTitleButtons}>
-          <HeroButtons
-            href="https://www.quandoo.com.au/place/mikys-italian-89295/widget?aid=146&utm_source=quandoo-partner&utm_medium=widget-link"
-            name="Book Now"
-            classDynamicStyle={heroStyles.herobtn}
-            animationBtn={btnHeroVariant}
-          />
+          <motion.button
+            className={heroStyles.herobtn}
+            initial="hidden"
+            animate="visible"
+            variants={btnHeroVariant}
+            onClick={() => {
+              setopenModal(true);
+            }}
+          >
+            Book Now
+          </motion.button>
+
           <HeroButtons
             href="/order.html"
             name="Order Online"

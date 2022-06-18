@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { StoreContext } from "../context/storeContext";
 import { client } from "../contentful/Contentful";
 //import About from "../components/AboutSection/About";
@@ -12,6 +12,7 @@ import styles from "../styles/Home.module.css";
 import Meta from "../components/meta/Meta";
 //import Functions from "../components/FunctionEnquire/Functions";
 import dynamic from "next/dynamic";
+import BookingForm from "../components/Modal booking Form/bookingForm";
 
 const DynamicAbout = dynamic(() => import("../components/AboutSection/About"));
 const DynamicSlider = dynamic(() =>
@@ -34,17 +35,20 @@ export default function Home({
   tradingHoursData,
   instagramData,
 }) {
-  const { imgHero, sortedMenuData } = useContext(StoreContext);
+  const { imgHero, sortedMenuData, openmodal, setOpenModal } =
+    useContext(StoreContext);
 
   const aboutSection = restaurantPage[0].fields;
   const imgSliderData = galleryData[0].fields.galleryImages;
   const instaPicArray = instagramData[0].fields.pictures;
 
+  console.log(openmodal);
   return (
     <div className={styles.container}>
       <Meta />
       <HeroSlideImages slides={imgHero} />
-      <HeroBanner />
+      <HeroBanner setopenModal={setOpenModal} />
+      {openmodal ? <BookingForm setopenmodal={setOpenModal} /> : null}
       <DynamicAbout aboutData={aboutSection} />
       <DynamicSlider dataImg={imgSliderData} />
       <div className={menuStyles.containerMenuH1}>

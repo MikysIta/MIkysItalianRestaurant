@@ -2,7 +2,7 @@
   width: 100%;
   padding: 8px 8px;
   position: fixed;
-  z-index: 999;
+  z-index: 90;
 
   background-color: transparent;
 }
@@ -10,7 +10,7 @@
   width: 100%;
   padding: 8px 8px;
   position: fixed;
-  z-index: 999;
+  z-index: 90;
 
   background-color: #262526;
   box-shadow: 7px 19px 36px -6px rgba(176, 143, 51, 0.5);
@@ -172,16 +172,16 @@
 }
 
 .ButtonBookingVisibile {
-  color: #b08f33;
+  color: black;
   font-size: 1.1rem;
 
   border: solid 2px rgba(255, 255, 255, 0.8);
   padding: 0.3em 1.2em;
   border-radius: 2em;
   transition: all 0.8s;
-
+cursor: pointer;
   font-family: "Playfair Display", serif;
-  font-weight: 500;
+  font-weight: 700;
   opacity: 1;
 }
 

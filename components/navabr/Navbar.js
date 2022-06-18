@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Link from "next/link";
-
+import { StoreContext } from "../../context/storeContext";
 import navStyles from "../../styles/Nav.module.css";
 import { Social } from "../../utility/util";
 import { useMediaQuery } from "react-responsive";
@@ -62,6 +62,7 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [desktop, setDesktop] = useState(false);
+  const { setOpenModal } = useContext(StoreContext);
 
   const isCloseToDesktop = useMediaQuery({
     query: "(min-width: 859px)",
@@ -176,15 +177,18 @@ const Navbar = () => {
           </div>
           {desktop ? (
             <div className={navStyles.bookingBtnCtn}>
-              <HeroButtons
-                name="Book a Table"
-                href="https://www.quandoo.com.au/place/mikys-italian-89295/widget?aid=146&utm_source=quandoo-partner&utm_medium=widget-link"
-                classDynamicStyle={
+              <button
+                onClick={() => {
+                  setOpenModal(true);
+                }}
+                className={
                   navbar
                     ? navStyles.ButtonBookingVisibile
                     : navStyles.ButtonBooking
                 }
-              />
+              >
+                Book a Table
+              </button>
             </div>
           ) : null}
         </ul>

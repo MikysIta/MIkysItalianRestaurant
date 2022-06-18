@@ -5,6 +5,8 @@ export const StoreContext = createContext();
 const StoreContextProvider = ({ children }) => {
   const [imgHero, setImgHero] = useState([]);
   const [sortedMenuData, setSortedMenuData] = useState([]);
+  // Modal booking form state
+  const [openmodal, setOpenModal] = useState(false);
   // Background Images Data
 
   const getBackgroundHero = useCallback(async () => {
@@ -44,7 +46,9 @@ const StoreContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <StoreContext.Provider value={{ imgHero, sortedMenuData }}>
+    <StoreContext.Provider
+      value={{ imgHero, sortedMenuData, openmodal, setOpenModal }}
+    >
       {children}
     </StoreContext.Provider>
   );

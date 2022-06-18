@@ -17,7 +17,7 @@ const EnquireForm = () => {
     email
       ? setStatus(true) &
         emailjs
-          .sendForm("service_1767zhj", "template_hwib3yj", e.target, userId)
+          .sendForm("service_1tndgoi", "template_hwib3yj", e.target, userId)
           .then(
             (result) => {
               setStatus(false);
@@ -46,6 +46,7 @@ const EnquireForm = () => {
             <label>Name *</label>
             <input type="text" name="name" required />
           </div>
+
           <div className={functionStyles.inputs}>
             <label>Email *</label>
             <input type="text" name="email" required onChange={handleChange} />

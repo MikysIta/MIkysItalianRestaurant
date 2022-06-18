@@ -5,11 +5,11 @@ import React from "react";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Layout>
-        <StoreContextProvider>
+      <StoreContextProvider>
+        <Layout>
           <Component {...pageProps} />
-        </StoreContextProvider>
-      </Layout>
+        </Layout>
+      </StoreContextProvider>
     </>
   );
 }

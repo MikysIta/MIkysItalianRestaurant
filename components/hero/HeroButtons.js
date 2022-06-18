@@ -10,7 +10,6 @@ const HeroButtons = ({ href, name, classDynamicStyle, animationBtn }) => {
       variants={animationBtn}
       href={href}
       rel="noopener"
-      rel="noreferrer"
       target="_self"
       className={classDynamicStyle}
     >

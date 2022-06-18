@@ -1,0 +1,110 @@
+import React, { useState, useRef } from "react";
+import bookigFormStyle from "../../styles/bookingForm.module.css";
+import { AiOutlineClose } from "react-icons/ai";
+import emailjs from "emailjs-com";
+
+const BookingForm = ({ setopenmodal }) => {
+  const [booked, setBooked] = useState("");
+  const [error, setError] = useState("");
+  const userId = process.env.NEXT_PUBLIC_USER_ID_EMAILJS;
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_1tndgoi", "template_xu28zqf", form.current, userId)
+      .then(
+        (result) => {
+          setBooked("Your Table is been Reserved") &
+            setTimeout(() => {
+              setBooked("");
+              setopenmodal(false);
+            }, 2000);
+        },
+        (error) => {
+          setError("Sorry something went wrong, try again");
+        }
+      );
+  };
+  return (
+    <div className={bookigFormStyle.modalBackground}>
+      <div className={bookigFormStyle.modalContainer}>
+        <div className={bookigFormStyle.modalCloseIconContainer}>
+          <img
+            src="assets/cropped-Outlook-ioabnzky.png"
+            alt="logo"
+            className={bookigFormStyle.modalCloseLogo}
+          />
+          <button
+            className={bookigFormStyle.modalCloseIconButton}
+            onClick={() => {
+              setopenmodal(false);
+            }}
+          >
+            <AiOutlineClose className={bookigFormStyle.modalCloseIcon} />
+          </button>
+        </div>
+        {booked ? (
+          <div className={bookigFormStyle.modalTableBooked}>
+            <p>{booked}</p>
+          </div>
+        ) : error ? (
+          <div className={bookigFormStyle.modalTableBookedError}>
+            <p>{error}</p>
+          </div>
+        ) : null}
+
+        <div className={bookigFormStyle.modalCtnTitle}>
+          <h1>Reservation</h1>
+          <p>Reserve your table between 17:00 pm and 20:45 pm </p>
+        </div>
+        <div className={bookigFormStyle.modalCtnForm}>
+          <form
+            ref={form}
+            className={bookigFormStyle.modalForm}
+            onSubmit={sendEmail}
+          >
+            <div className={bookigFormStyle.modalinputCtn}>
+              <label>Name </label>
+              <input type="text" name="name" required />
+            </div>
+            <div className={bookigFormStyle.modalinputCtn}>
+              <label>Phone </label>
+              <input type="text" name="phone" required />
+            </div>
+            <div className={bookigFormStyle.modalinputCtn}>
+              <label> Date </label>
+              <input type="date" name="date" required />
+            </div>
+            <div className={bookigFormStyle.modalinputCtn}>
+              <label> Time </label>
+              <input type="time" name="time" min="17:00" max="21:00" required />
+            </div>
+            <div className={bookigFormStyle.modalinputCtn}>
+              <label> No. People</label>
+              <input type="number" name="number" required />
+            </div>
+            <div className={bookigFormStyle.modalTextAreaCtn}>
+              <div className={bookigFormStyle.modalTextAreaCtnLabel}>
+                <label> Additional Message</label>
+                <p>Special occasion, Dietary requirements etc..</p>
+              </div>
+              <textarea name="message" placeholder="Write your message..." />
+            </div>
+            <div className={bookigFormStyle.modalCtnSubmit}>
+              <input
+                className={bookigFormStyle.modalBtn}
+                type="submit"
+                value="Book a Table"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BookingForm;
