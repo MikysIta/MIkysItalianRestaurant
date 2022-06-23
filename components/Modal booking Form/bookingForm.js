@@ -6,7 +6,11 @@ import emailjs from "emailjs-com";
 const BookingForm = ({ setopenmodal }) => {
   const [booked, setBooked] = useState("");
   const [error, setError] = useState("");
+  const [fullyBooked, setFullyBooked] = useState(false);
   const userId = process.env.NEXT_PUBLIC_USER_ID_EMAILJS;
+
+  const currentDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+  const tomorrow = currentDate.toISOString().split("T")[0];
 
   const form = useRef();
 
@@ -54,6 +58,10 @@ const BookingForm = ({ setopenmodal }) => {
           <div className={bookigFormStyle.modalTableBookedError}>
             <p>{error}</p>
           </div>
+        ) : fullyBooked ? (
+          <div className={bookigFormStyle.modalTableFullyBooked}>
+            <p>Sorry we are fully booked today </p>
+          </div>
         ) : null}
 
         <div className={bookigFormStyle.modalCtnTitle}>
@@ -71,12 +79,21 @@ const BookingForm = ({ setopenmodal }) => {
               <input type="text" name="name" required />
             </div>
             <div className={bookigFormStyle.modalinputCtn}>
+              <label>Email </label>
+              <input type="text" name="email" required />
+            </div>
+            <div className={bookigFormStyle.modalinputCtn}>
               <label>Phone </label>
               <input type="text" name="phone" required />
             </div>
             <div className={bookigFormStyle.modalinputCtn}>
               <label> Date </label>
-              <input type="date" name="date" required />
+              <input
+                type="date"
+                name="date"
+                required
+                min={fullyBooked ? tomorrow : null}
+              />
             </div>
             <div className={bookigFormStyle.modalinputCtn}>
               <label> Time </label>
