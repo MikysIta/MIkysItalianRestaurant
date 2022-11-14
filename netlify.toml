@@ -5,8 +5,3 @@ publish = ".next"
 [functions]
   included_files = [".next/*.json"]
 
-[[redirects]]
-  from = "/_next/static/*"
-  to = "/static/:splat"
-  status = 301
-  force = true
