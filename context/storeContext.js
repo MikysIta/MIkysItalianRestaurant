@@ -3,10 +3,29 @@ import { client } from "../contentful/Contentful";
 export const StoreContext = createContext();
 
 const StoreContextProvider = ({ children }) => {
+  // Availability
+  const [fullyBooked, setFullyBooked] = useState(false);
+
   const [imgHero, setImgHero] = useState([]);
   const [sortedMenuData, setSortedMenuData] = useState([]);
   // Modal booking form state
   const [openmodal, setOpenModal] = useState(false);
+
+  // Availability Data
+
+  const getAvailability = useCallback(async () => {
+    try {
+      let response = await client.getEntries({
+        content_type: "availability",
+      });
+
+      const fullyBookedRest = response.items[0].fields.fullyBooked;
+      return setFullyBooked(fullyBookedRest);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [setFullyBooked]);
+
   // Background Images Data
 
   const getBackgroundHero = useCallback(async () => {
@@ -43,11 +62,12 @@ const StoreContextProvider = ({ children }) => {
   useEffect(() => {
     getBackgroundHero();
     getMenuesData();
+    getAvailability();
   }, []);
 
   return (
     <StoreContext.Provider
-      value={{ imgHero, sortedMenuData, openmodal, setOpenModal }}
+      value={{ imgHero, sortedMenuData, openmodal, fullyBooked, setOpenModal }}
     >
       {children}
     </StoreContext.Provider>

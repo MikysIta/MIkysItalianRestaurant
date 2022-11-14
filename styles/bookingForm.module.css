@@ -203,6 +203,7 @@ padding-top: 15px;
   }
   .modalTableFullyBooked{
     width: 100%;
+    
     background-color: orange;
     display: flex;
     justify-content: center;
@@ -277,6 +278,9 @@ padding-top: 15px;
      
      margin-top: 10px;
     
+    }
+    .modalTableFullyBooked{
+      padding: 12px;
     }
     
   }

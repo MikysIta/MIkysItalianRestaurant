@@ -1,15 +1,18 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import bookigFormStyle from "../../styles/bookingForm.module.css";
 import { AiOutlineClose } from "react-icons/ai";
+import { StoreContext } from "../../context/storeContext";
 import emailjs from "emailjs-com";
 
 const BookingForm = ({ setopenmodal }) => {
   const [booked, setBooked] = useState("");
   const [error, setError] = useState("");
-  const [fullyBooked, setFullyBooked] = useState(false);
+  const { fullyBooked } = useContext(StoreContext);
+
   const userId = process.env.NEXT_PUBLIC_USER_ID_EMAILJS;
 
   const currentDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+  //const DayAfter = new Date(new Date().getTime() + 48 * 60 * 60 * 1000);
   const tomorrow = currentDate.toISOString().split("T")[0];
 
   const form = useRef();
@@ -60,7 +63,7 @@ const BookingForm = ({ setopenmodal }) => {
           </div>
         ) : fullyBooked ? (
           <div className={bookigFormStyle.modalTableFullyBooked}>
-            <p>Sorry we are fully booked today </p>
+            <p>SORRY WE ARE FULLY BOOKED </p>
           </div>
         ) : null}
 
