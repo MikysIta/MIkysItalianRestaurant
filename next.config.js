@@ -1,16 +1,16 @@
-const withCss = require("@zeit/next-css");
-const withPurgeCss = require("next-purgecss");
+//const withCss = require("@zeit/next-css");
+//const withPurgeCss = require("next-purgecss");
 
-module.exports = withCss(
-  withPurgeCss({
-    purgeCssPaths: [
-      "pages/**/*",
-      "components/**/*",
-      "styles/**/*",
-      "other-components/**/*",
-    ],
-  })
-);
+//module.exports = withCss(
+//withPurgeCss({
+//purgeCssPaths: [
+//"pages/**/*",
+//"components/**/*",
+//"styles/**/*",
+//"other-components/**/*",
+//],
+//})
+//);
 
 module.exports = {
   reactStrictMode: true,
