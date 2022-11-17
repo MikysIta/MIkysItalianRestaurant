@@ -63,12 +63,13 @@ const BookingForm = ({ setopenmodal }) => {
           </div>
         ) : fullyBooked ? (
           <div className={bookigFormStyle.modalTableFullyBooked}>
-            <p>SORRY WE ARE FULLY BOOKED </p>
+            <p>SORRY WE ARE FULLY BOOKED TODAY </p>
+            <p>You can call the restaurant for more info.</p>
           </div>
         ) : null}
 
         <div className={bookigFormStyle.modalCtnTitle}>
-          <h1>Reservation</h1>
+          <h2>Reservation</h2>
           <p>Reserve your table between 17:00 pm and 20:45 pm </p>
         </div>
         <div className={bookigFormStyle.modalCtnForm}>

@@ -60,7 +60,7 @@
     
   }
 
-  .modalCtnTitle h1{
+  .modalCtnTitle h2{
     font-family: "Playfair Display", serif;
     padding-left: 25px;
     
@@ -203,19 +203,30 @@ padding-top: 15px;
   }
   .modalTableFullyBooked{
     width: 100%;
+    padding:8px;
+   
     
     background-color: orange;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .modalTableBooked, .modalTableBookedError, .modalTableFullyBooked  p{
+  .modalTableFullyBooked p{
+
+    font-family: "Playfair Display", serif;
+    font-size:0.7rem;
+    color: white;
+  }
+
+  .modalTableBooked, .modalTableBookedError p{
     padding:8px;
     font-family: "Playfair Display", serif;
     font-size:1rem;
     color: white;
   }
+ 
 
   @media only screen and (min-device-width: 650px) 
                    and (max-device-width: 1022px) 
@@ -257,6 +268,7 @@ padding-top: 15px;
      
      .modalCtnTitle{
      padding: 12px;
+     font-size: 20px;
       
       
     }
@@ -281,6 +293,12 @@ padding-top: 15px;
     }
     .modalTableFullyBooked{
       padding: 12px;
+    }
+    .modalTableFullyBooked p{
+
+     
+      font-size:1rem;
+      
     }
     
   }
