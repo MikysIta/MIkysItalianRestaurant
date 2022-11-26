@@ -123,8 +123,12 @@
   width: 100%;
   padding-bottom: 15px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.dayField{
+  color:#b08f33;
 }
 
 .ctnSocial {
@@ -211,6 +215,12 @@
   .hoursList {
     list-style: none;
     width: 75%;
+  }
+  .hoursList li{
+    flex-direction: row;
+  }
+  .dayField{
+    color:black;
   }
 }
 

@@ -13,7 +13,8 @@ const OpeningHours = ({ hours }) => {
         {sortedArray.map((day, id) => {
           return (
             <li key={id}>
-              <span>{day.fields.day}</span>
+              <span className={contactStyles.dayField}>{day.fields.day}</span>
+
               <span>{day.fields.hour}</span>
             </li>
           );

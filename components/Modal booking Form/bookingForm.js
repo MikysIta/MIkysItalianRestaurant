@@ -70,7 +70,10 @@ const BookingForm = ({ setopenmodal }) => {
 
         <div className={bookigFormStyle.modalCtnTitle}>
           <h2>Reservation</h2>
-          <p>Reserve your table between 17:00 pm and 20:45 pm </p>
+          <p>
+            Reserve your table between 12:00pm and 14.00pm or 17:00pm and
+            20:45pm{" "}
+          </p>
         </div>
         <div className={bookigFormStyle.modalCtnForm}>
           <form
