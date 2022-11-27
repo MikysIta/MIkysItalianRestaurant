@@ -104,7 +104,7 @@ const BookingForm = ({ setopenmodal }) => {
             </div>
             <div className={bookigFormStyle.modalinputCtn}>
               <label> Time </label>
-              <input type="time" name="time" min="17:00" max="21:00" required />
+              <input type="time" name="time" min="12:00" max="21:00" required />
             </div>
             <div className={bookigFormStyle.modalinputCtn}>
               <label> No. People</label>
