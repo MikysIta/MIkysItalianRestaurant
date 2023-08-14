@@ -18,5 +18,5 @@ export const Contacts = {
   address: "88 broadway Crawley, Nedlands, WA 6009",
   Email: "mikysrestaurant@hotmail.com",
   Phone: "+61 1300541742",
-  Fax: "+61 0413830263 ",
+  Fax: "+61 0431673061 ",
 };
